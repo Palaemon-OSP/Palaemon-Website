@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="footer" id="footer">
       <div className="footer-left">
-        <a href="/"><img className="icon" id="logo" src="logo-hat.png" /></a>
+        <a href="/"><img className="icon" id="logo" src="public/logo-hat.png" /></a>
       </div>
       <div className="footer-middle">
         <h1 id="copyright">&copy; 2022 Palaemon | MIT License</h1>

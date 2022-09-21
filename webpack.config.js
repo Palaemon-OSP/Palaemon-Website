@@ -11,13 +11,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "public/index.html"),
+      template: path.resolve(__dirname, "src/index.html"),
     }), 
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'public'),
-          to: '/dist',
+          to: 'public',
         }
       ]
     })

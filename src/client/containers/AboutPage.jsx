@@ -7,7 +7,7 @@ const AboutPage = () => {
       <h1>I am the landing page</h1>
       <section id='intro'>
         <figure className='div-side'>
-          <img src="logo.png" alt="" />
+          <img src="public/logo.png" alt="" />
         </figure>
         <main className='div-main'>
           <p>This is the blah blah part about what Palaemon is</p>
@@ -26,14 +26,14 @@ const AboutPage = () => {
           <p>We'll show a cool gif demo-ing our app here!!</p>
         </main>
         <figure className='div-side'>
-          <img src="logo.png" alt="" />
+          <img src="public/logo.png" alt="" />
         </figure>
       </section>
       <section id='contact'>
         <p>This is where we'll have our beautiful photos and ways to connect with such spectacular engineers like us!</p>
         <div className='spectacular'>
           <div className='spectacular-person'>
-            <div className='spectacular-person-photo'> <img src="logo.png" alt="" /></div>
+            <div className='spectacular-person-photo'> <img src="public/logo.png" alt="" /></div>
             <div className='spectacular-person-name'>NAME</div>
             <div className='spectacular-person-title'>title</div>
             <div className='spectacular-person-links'>
@@ -50,7 +50,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='spectacular-person'>
-            <div className='spectacular-person-photo'> <img src="logo.png" alt="" /></div>
+            <div className='spectacular-person-photo'> <img src="public/logo.png" alt="" /></div>
             <div className='spectacular-person-name'>NAME</div>
             <div className='spectacular-person-title'>title</div>
             <div className='spectacular-person-links'>
@@ -67,7 +67,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='spectacular-person'>
-            <div className='spectacular-person-photo'> <img src="logo.png" alt="" /></div>
+            <div className='spectacular-person-photo'> <img src="public/logo.png" alt="" /></div>
             <div className='spectacular-person-name'>NAME</div>
             <div className='spectacular-person-title'>title</div>
             <div className='spectacular-person-links'>
@@ -84,7 +84,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div className='spectacular-person'>
-            <div className='spectacular-person-photo'> <img src="logo.png" alt="" /></div>
+            <div className='spectacular-person-photo'> <img src="public/logo.png" alt="" /></div>
             <div className='spectacular-person-name'>NAME</div>
             <div className='spectacular-person-title'>title</div>
             <div className='spectacular-person-links'>
