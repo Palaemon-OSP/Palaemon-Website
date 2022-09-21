@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server/server.js",
     "dev": "webpack serve --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && echo '/* /index.html 200' | cat >dist/_redirects"
   },
   "keywords": [],
   "author": "",
