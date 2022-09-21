@@ -9,10 +9,19 @@ $tertiary-color: #d1ece9;
 $s-light-color: #e5ffff;
 $s-dark-color: #82ada9;
 
+$dark-grey-font: #777;
 $grey: #ddd;
+$white-font: rgba(255, 255, 255, 0.9);
+$subheading-font: 2rem;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
+  font-size: 62.5%;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
@@ -20,10 +29,9 @@ html {
 }
 
 body {
-  background-color: $secondary-color;
+  background-color: $white-font;
   min-height: 100vh;
   width: 100vw;
-  margin: 0;
 }
 
 img {
@@ -38,15 +46,29 @@ img {
 
 #navbar {
   display: flex;
-  justify-content: space-between;
-  background-color: whitesmoke;
-  border-bottom: 1px solid $p-dark-color;
-  padding: 10px;
-  margin-bottom: 80px;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    $ugly-sewage-green,
+    $ugly-sewage-green
+  );
+  position: fixed;
+  min-width: 100%;
+  height: 8rem;
+  // background-color: $ugly-sewage-green;
+  // border-bottom: 1px solid $grey;
+  // padding: 2rem;
+  // margin-bottom: 8rem;
 
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 120rem;
+  }
   #logo {
-    width: 72px;
-    margin: 8px 8px 8px 16px;
+    width: 8rem;
+    // margin: 0.8rem 0.8rem 0.8rem 1.6rem;
   }
 
   .nav-right-container {
@@ -57,14 +79,14 @@ img {
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 4.8rem;
     text-align: center;
     margin: 8px 16px;
 
     * {
-      color: $p-dark-color;
+      color: $white-font;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 2rem;
     }
   }
 }
@@ -72,59 +94,67 @@ img {
 #landing-container {
   margin: 0 12%;
   flex-grow: 1;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   section {
     display: flex;
-    margin: 40px 0;
-    padding: 10px 50px;
-    color: $s-light-color;
-    font-size: 2rem;
+    margin-bottom: 12rem;
+    // padding: 10px 50px;
+    color: $font-color;
+    font-size: 3.2rem;
 
-    
-    &#intro, &#features{
-      background-color: $p-dark-color;
+    &#hero,
+    &#features {
+      // background-color: $p-dark-color;
+      width: 120rem;
 
-      main, figure {
+      main,
+      figure {
         width: 50%;
       }
     }
-  
-    &#demo{
+
+    &#demo {
       flex-direction: column;
       background-color: $p-dark-color;
       align-items: center;
 
-      main, figure {
-        width: 100%
+      main,
+      figure {
+        width: 100%;
       }
     }
-    &#contact{
+    &#contact {
       display: flex;
       flex-direction: column;
       background-color: $p-dark-color;
-      
+
       h1 {
         display: block;
       }
-      
+
       .spectacular {
         display: flex;
         justify-content: space-around;
         gap: 50px;
         background-color: $secondary-color;
 
-        &-person{
+        &-person {
           display: flex;
           flex-direction: column;
           align-items: center;
 
-          &-name{
+          &-name {
             font-size: 1.5rem;
           }
-          &-title{
+          &-title {
             font-size: 1.2rem;
           }
-          &-links{
+          &-links {
             display: flex;
             justify-content: space-around;
             img {
@@ -138,6 +168,23 @@ img {
   }
 }
 
+#hero {
+  .hero-subheading {
+    font-size: $subheading-font;
+    color: $dark-grey-font;
+  }
+
+  .hero-li-1,
+  .hero-li-2 {
+    list-style: none;
+  }
+
+  .hero-il-1 {
+  }
+  .hero-il-2 {
+  }
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -145,14 +192,14 @@ footer {
   border-top: 1px solid $p-dark-color;
   background-color: whitesmoke;
   padding: 8px 16px;
-  img{
+  img {
     height: 20px;
     width: auto;
     margin: 0 4px;
   }
   h1 {
     font-size: 12px;
-    color: $p-dark-color
+    color: $p-dark-color;
   }
 }
 
@@ -169,7 +216,7 @@ footer {
   flex-grow: 1;
   display: flex;
 
-  &-sidebar{
+  &-sidebar {
     width: 280px;
     min-width: 280px;
 
@@ -181,64 +228,64 @@ footer {
 
     li {
       margin: 8px 0;
-      &.h1{
+      &.h1 {
         font-size: 1.4rem;
       }
-      &.h2{
+      &.h2 {
         font-size: 1.2rem;
       }
-      &.h3{
+      &.h3 {
         font-size: 1rem;
       }
     }
   }
 
-  &-main{
+  &-main {
     background-color: $p-light-color;
     flex-grow: 1;
     padding: 8px 60px;
 
-    *, *:before, *:after {
+    *,
+    *:before,
+    *:after {
       box-sizing: border-box;
     }
 
-    pre[class*="language-"] {
-        position:relative;
-        overflow: auto;
-        margin:5px 0;
-        padding:1.75rem 0 1.75rem 1rem;
-        border-radius:10px;
+    pre[class*='language-'] {
+      position: relative;
+      overflow: auto;
+      margin: 5px 0;
+      padding: 1.75rem 0 1.75rem 1rem;
+      border-radius: 10px;
     }
-    
-    button{
-      position:absolute;
-      top:5px;
-      right:5px;
-      
-      font-size:.9rem;
-      padding:.15rem;
-      background-color:#828282;
-      color:1e1e1e;
-      border:ridge 1px #7b7b7c;
-      border-radius:5px;
-      text-shadow:#c4c4c4 0 0 2px;
+
+    button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+
+      font-size: 0.9rem;
+      padding: 0.15rem;
+      background-color: #828282;
+      color: 11ee1e;
+      border: ridge 1px #7b7b7c;
+      border-radius: 5px;
+      text-shadow: #c4c4c4 0 0 2px;
     }
-    
-    button:hover{
-      cursor:pointer;
-       background-color:#bcbabb;
+
+    button:hover {
+      cursor: pointer;
+      background-color: #bcbabb;
     }
-    
+
     main {
       display: grid;
       max-width: 600px;
       margin: 20px auto;
     }
-    
-    
-    h1{
-      font-size:1.3rem;
-    }
 
+    h1 {
+      font-size: 1.3rem;
+    }
   }
 }
