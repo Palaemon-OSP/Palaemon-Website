@@ -1,41 +1,34 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/client/index.jsx',
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-  },
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-      publicPath: '/dist',
-    },
-    port: 8080,
-    open: true,
-    hot: true,
-    compress: true,
-    historyApiFallback: true,
-    proxy: {
-      '/api': 'http://localhost:3000',
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-    }),
+      template: path.resolve(__dirname, "public/index.html"),
+    }), 
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'public'),
+          to: '/dist',
+        }
+      ]
+    })
   ],
   module: {
     rules: [
       {
-        test: /.(js|jsx)$/,
+        test: /.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
+          loader: 'ts-loader',
         },
       },
       {
@@ -53,11 +46,9 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  performance: {
-    hints: false,
-    maxAssetSize: 500000,
-    maxEntrypointSize: 500000,
-  },
+  devServer: {
+    historyApiFallback: true,
+  }
 };

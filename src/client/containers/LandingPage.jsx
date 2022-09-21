@@ -1,10 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
+
 
 const LandingPage = () => {
   return (
     <div>
-      <Nav />
+      <h1>I am the landing page</h1>
     </div>
   );
 };

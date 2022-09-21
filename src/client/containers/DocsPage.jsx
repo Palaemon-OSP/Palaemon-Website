@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Docs = () => {
+const DocsPage = () => {
   return <div>Docs</div>;
 };
 
-export default Docs;
+export default DocsPage;
