@@ -13,15 +13,20 @@ $grey: #ddd;
 
 
 html {
-  background-color: $secondary-color;
+  background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
-  ;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
-  height: 100vh;
+  background-color: $secondary-color;
   width: 100vw;
   margin: 0;
+}
+
+img {
+  width: 100%;
 }
 
 #root {
@@ -63,5 +68,87 @@ body {
 }
 
 #landing-container {
-  margin: 0 15%;
+  margin: 0 12%;
+
+  section {
+    display: flex;
+    margin: 40px 0;
+    padding: 10px 50px;
+    color: $s-light-color;
+    font-size: 2rem;
+
+    
+    &#intro, &#features{
+      background-color: $p-dark-color;
+
+      main, figure {
+        width: 50%;
+      }
+    }
+  
+    &#demo{
+      flex-direction: column;
+      background-color: $p-dark-color;
+      align-items: center;
+
+      main, figure {
+        width: 100%
+      }
+    }
+    &#contact{
+      display: flex;
+      flex-direction: column;
+      background-color: $p-dark-color;
+      
+      h1 {
+        display: block;
+      }
+      
+      .spectacular {
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+        background-color: $secondary-color;
+
+        &-person{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &-name{
+            font-size: 1.5rem;
+          }
+          &-title{
+            font-size: 1.2rem;
+          }
+          &-links{
+            display: flex;
+            justify-content: space-around;
+            img {
+              width: 20px;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $p-dark-color;
+  background-color: whitesmoke;
+  padding: 8px 16px;
+  img{
+    height: 20px;
+    width: auto;
+    margin: 0 4px;
+  }
+  h1 {
+    font-size: 12px;
+    color: $p-dark-color
+  }
 }
