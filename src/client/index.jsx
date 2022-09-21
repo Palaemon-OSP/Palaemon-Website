@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Nav from './components/Nav';
+import Navbar from './containers/Navbar';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import LandingPage from './containers/LandingPage';
+import AboutPage from './containers/AboutPage';
 import DocsPage from './containers/DocsPage';
 import NotFoundPage from './containers/NotFoundPage';
 
@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <LandingPage />,
+    element: <AboutPage />,
     errorElement: <NotFoundPage />,
   },
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <Nav />
+    <Navbar />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
