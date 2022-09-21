@@ -12,7 +12,8 @@ app.use(express.static(path.resolve(__dirname, '../../dist')));
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
-app.get('/', (req, res) =>
+// use react router browser routing for all routing requests
+app.get('*', (req, res) =>
   res.status(200).sendFile(path.resolve(__dirname, '../../dist/index.html'))
 );
 
