@@ -8,6 +8,7 @@ import DocsPage from './containers/DocsPage';
 import NotFoundPage from './containers/NotFoundPage';
 
 import "../../public/styles.scss"
+import Prism from 'prismjs'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([

@@ -160,6 +160,9 @@ footer {
   // makes the error page take up the whole page
   flex-grow: 1;
   text-align: center;
+  img {
+    width: 300px;
+  }
 }
 
 #docs {
@@ -195,15 +198,16 @@ footer {
     flex-grow: 1;
     padding: 8px 60px;
 
-    pre {
-      [class*="language-"] {
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    pre[class*="language-"] {
         position:relative;
         overflow: auto;
         margin:5px 0;
         padding:1.75rem 0 1.75rem 1rem;
         border-radius:10px;
-        background-color: #343435;
-      }
     }
     
     button{
