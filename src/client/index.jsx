@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Navbar from './containers/Navbar';
+import Footer from './containers/Footer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AboutPage from './containers/AboutPage';
 import DocsPage from './containers/DocsPage';
@@ -26,5 +27,6 @@ root.render(
   <React.StrictMode>
     <Navbar />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>
 );
