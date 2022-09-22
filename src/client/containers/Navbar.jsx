@@ -19,7 +19,10 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="/medium" target="_blank">
+              <a
+                href="https://medium.com/@ospalaemon/introducing-palaemon-the-savior-of-kubernetes-pods-85576c33287c"
+                target="_blank"
+              >
                 Blog
               </a>
             </li>
