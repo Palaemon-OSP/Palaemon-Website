@@ -22,7 +22,7 @@ $subheading-font: 2rem;
 
 html {
   font-size: 62.5%;
-  background-color: whitesmoke;
+  background-color: rgb(234, 234, 234);
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow-x: hidden;
@@ -38,28 +38,36 @@ img {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+#palaemon-logo {
+  width: 54rem;
+  margin-top: -6rem;
+}
+
 #navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom,
-    $ugly-sewage-green,
-    $ugly-sewage-green
+    $ugly-sewage-green 0%,
+    $p-light-color 95%
   );
   position: fixed;
-  min-width: 100%;
   height: 8rem;
-  // background-color: $ugly-sewage-green;
-  // border-bottom: 1px solid $grey;
-  // padding: 2rem;
-  // margin-bottom: 8rem;
+  min-width: 100%;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+  z-index: 99;
 
   .nav-container {
     display: flex;
@@ -81,12 +89,12 @@ img {
     list-style: none;
     gap: 4.8rem;
     text-align: center;
-    margin: 8px 16px;
+    margin: 0.8rem 1.6rem;
 
     * {
       color: $white-font;
       text-decoration: none;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
   }
 }
@@ -102,7 +110,8 @@ img {
 
   section {
     display: flex;
-    margin-bottom: 12rem;
+    align-items: flex-start;
+    margin-bottom: 16rem;
     // padding: 10px 50px;
     color: $font-color;
     font-size: 3.2rem;
@@ -169,9 +178,22 @@ img {
 }
 
 #hero {
+  gap: 10rem;
+
+  h1 {
+    letter-spacing: 0.2rem;
+  }
+
   .hero-subheading {
     font-size: $subheading-font;
     color: $dark-grey-font;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .hero-li-div {
+    display: flex;
+    gap: 1rem;
   }
 
   .hero-li-1,
@@ -179,9 +201,124 @@ img {
     list-style: none;
   }
 
-  .hero-il-1 {
+  .hero-li-1 {
+    font-size: 1.6rem;
+    font-weight: 700;
   }
-  .hero-il-2 {
+  .hero-li-2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    color: $dark-grey-font;
+  }
+
+  .hero-btn {
+    border-radius: 1rem;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(
+      to bottom,
+      $ugly-sewage-green 0%,
+      $p-light-color 95%
+    );
+    color: $white-font;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+    transition: all 0.2s;
+  }
+
+  .hero-btn:hover {
+    background: $white-font;
+    color: $ugly-sewage-green;
+    filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6));
+    cursor: pointer;
+  }
+}
+
+#features {
+  gap: 10rem;
+  .features-heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .features-subheading {
+    font-size: 1.8rem;
+    color: $dark-grey-font;
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+
+  .features-text {
+    font-size: 1.6rem;
+  }
+
+  .feature-btns {
+    display: flex;
+    gap: 2rem;
+    .feature-btn {
+      border-radius: 1rem;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      background: linear-gradient(
+        to bottom,
+        $ugly-sewage-green 0%,
+        $p-light-color 95%
+      );
+      color: $white-font;
+      text-transform: uppercase;
+      letter-spacing: 0.06rem;
+      box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+      flex: wrap;
+      width: 14rem;
+      transition: all 0.2s;
+      font-size: 1rem;
+      letter-spacing: 0.06rem;
+    }
+  }
+
+  .feature-btn:hover {
+    background: $white-font;
+    color: $ugly-sewage-green;
+    filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6));
+    cursor: pointer;
+  }
+
+  .icon {
+    // border: 1px #003d33 solid;
+    border-radius: 10px;
+    background: $ugly-sewage-green;
+    background: linear-gradient(
+      135deg,
+      $ugly-sewage-green 0%,
+      $p-light-color 95%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.6rem;
+  }
+  .features-right-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.1rem;
+  }
+  .features-text {
+    color: $dark-grey-font;
+    line-height: 1.5;
+    font-size: 1.4rem;
+  }
+
+  .feature-right-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 4rem;
   }
 }
 
@@ -215,33 +352,46 @@ footer {
 #docs {
   flex-grow: 1;
   display: flex;
+  font-size: 2rem;
 
   &-sidebar {
+    background-color: #002a25;
     width: 280px;
     min-width: 280px;
 
     ul {
+      position: fixed;
+      top: 35rem;
       list-style: none;
-      margin: 0 32px;
+      margin: 0 2rem;
       padding: 0;
+    }
+    img {
+      position: fixed;
+      top: 8rem;
+      width: 280px;
+      margin-top: 0px;
     }
 
     li {
       margin: 8px 0;
+      word-wrap: break-word;
+      white-space: nowrap;
+
       &.h1 {
-        font-size: 1.4rem;
+        // font-size: 1.4rem;
       }
       &.h2 {
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
       }
       &.h3 {
-        font-size: 1rem;
+        // font-size: 1rem;
       }
     }
   }
 
   &-main {
-    background-color: $p-light-color;
+    background-color: rgb(234, 234, 234);
     flex-grow: 1;
     padding: 8px 60px;
 
@@ -285,7 +435,41 @@ footer {
     }
 
     h1 {
-      font-size: 1.3rem;
+      padding-top: 8rem;
+    }
+
+    h2 {
+      padding-top: 8rem;
+    }
+
+    p,
+    li {
+      margin-top: 1rem;
+    }
+
+    img {
+      margin-top: 8rem;
+      border-radius: 2rem;
+      // width: 400px;
+    }
+
+    a {
+      color: black;
+      text-decoration: underline;
+      // background-color: $s-light-color;
+      // border-radius: 1rem;
+
+      &:hover {
+        color: $p-light-color;
+      }
+    }
+
+    .inline-code {
+      color: rgb(201, 106, 42);
+      font-weight: 500;
     }
   }
 }
+
+// .feature-square {
+// }
