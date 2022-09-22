@@ -91,7 +91,8 @@ const AboutPage = () => {
             render metrics for your cluster in a visually digestible format and
             helps identify Out of Memory (OOMKill) errors.
           </p>
-          <div className="feature-btns">
+          {/* -------------------- DOWNLOAD BUTTONS -------------------- */}
+          {/* <div className="feature-btns">
             <a
               href="../../../public/logo.png"
               download={'Palaemon Installer MacOS Apple ARM'}
@@ -137,9 +138,12 @@ const AboutPage = () => {
                   Download for MAC with Intel Chip
                 </div>
               </button>
-            </a>
-          </div>
+            </a> */
+          /* </div> */}
+          {/* -------------------- END OF DOWNLOAD BUTTONS -------------------- */}
+          <button className="feature-btn">See the Docs</button>
         </main>
+        {/* -------------------- START OF FEATURE GRID -------------------- */}
         <figure className="feature-right-side">
           {/* Alerts and Events Logs */}
           <div className="feature-square">

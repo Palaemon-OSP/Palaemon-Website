@@ -22,14 +22,13 @@ $subheading-font: 2rem;
 
 html {
   font-size: 62.5%;
-  background-color: rgb(234, 234, 234);
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow-x: hidden;
 }
 
 body {
-  background-color: $white-font;
+  background-color: #e6f0ef;
   min-height: 100vh;
   width: 100vw;
 }
@@ -111,7 +110,7 @@ a {
   section {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 16rem;
+    margin-bottom: 20rem;
     // padding: 10px 50px;
     color: $font-color;
     font-size: 3.2rem;
@@ -129,7 +128,7 @@ a {
 
     &#demo {
       flex-direction: column;
-      background-color: $p-dark-color;
+      background-color: $white-font;
       align-items: center;
 
       main,
@@ -140,8 +139,7 @@ a {
     &#contact {
       display: flex;
       flex-direction: column;
-      color: $font-color;
-      // background-color: $p-dark-color;
+      color: $white-font;
 
       h1 {
         display: block;
@@ -151,16 +149,29 @@ a {
         display: flex;
         justify-content: space-around;
         gap: 50px;
-        // background-color: $secondary-color;
 
         &-person {
+          background: linear-gradient(
+            to bottom,
+            $ugly-sewage-green 0%,
+            $p-light-color 95%
+          );
           display: flex;
           flex-direction: column;
           align-items: center;
+          border-radius: 2rem;
+          padding: 2rem;
+          box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.4);
 
+          &-photo {
+            img {
+              width: 20rem;
+              border-radius: 1rem;
+            }
+          }
           &-name {
-            font-size: 1.5rem;
-            margin-bottom: 0.6rem;
+            font-size: 1.6rem;
+            margin: 0.6rem 0 0.4rem 0;
           }
           &-title {
             font-size: 1.2rem;
@@ -169,8 +180,8 @@ a {
             display: flex;
             justify-content: space-around;
             img {
-              width: 20px;
-              margin: 0 5px;
+              width: 3rem;
+              margin: 2rem 0.5rem;
             }
           }
         }
@@ -218,7 +229,7 @@ a {
   .hero-btn {
     border-radius: 1rem;
     border: none;
-    padding: 1.2rem 2.4rem;
+    padding: 1.2rem 2.2rem;
     background: linear-gradient(
       to bottom,
       $ugly-sewage-green 0%,
@@ -230,12 +241,14 @@ a {
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
     transition: all 0.2s;
     margin-top: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
   }
 
   .hero-btn:hover {
     background: $white-font;
     color: $ugly-sewage-green;
-    filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6));
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
   }
 }
@@ -259,43 +272,39 @@ a {
     font-size: 1.6rem;
   }
 
-  .feature-btns {
+  .feature-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
+    border-radius: 1rem;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    background: linear-gradient(
+      to bottom,
+      $ugly-sewage-green 0%,
+      $p-light-color 95%
+    );
+    color: $white-font;
+    // text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+    flex: wrap;
+    transition: all 0.2s;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 
-    .feature-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      border-radius: 1rem;
-      border: none;
-      padding: 1.2rem 2.4rem;
-      background: linear-gradient(
-        to bottom,
-        $ugly-sewage-green 0%,
-        $p-light-color 95%
-      );
-      color: $white-font;
-      // text-transform: uppercase;
-      letter-spacing: 0.06rem;
-      box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
-      flex: wrap;
-      width: 24rem;
-      transition: all 0.2s;
-      font-size: 1.5rem;
-      letter-spacing: 0.1rem;
-    }
-
-    .feature-btn-text {
-      text-align: left;
-    }
+  .feature-btn-text {
+    text-align: left;
   }
 
   .feature-btn:hover {
-    background: $white-font;
+    background: #fff;
     color: $ugly-sewage-green;
-    filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6));
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
   }
 
@@ -304,7 +313,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 4rem;
-    margin-top: 1.6rem;
+    margin-top: 0.6rem;
   }
 
   .icon {
@@ -340,7 +349,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid $p-dark-color;
+  // border-top: 1px solid $p-dark-color;
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
   background-color: whitesmoke;
   padding: 8px 16px;
   img {
@@ -358,15 +368,24 @@ footer {
   // makes the error page take up the whole page
   flex-grow: 1;
   text-align: center;
+  margin-top: 10rem;
   img {
-    width: 300px;
+    width: 60rem;
+  }
+  h1 {
+    font-size: 4.8rem;
+    margin-bottom: 1.2rem;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
 #docs {
   flex-grow: 1;
   display: flex;
-  font-size: 2rem;
+  font-size: 1.6rem;
 
   &-sidebar {
     background-color: #002a25;
@@ -394,9 +413,9 @@ footer {
       // display: inline-block;
       // white-space: nowrap;
 
-      // &.h1 {
-      //   // font-size: 1.4rem;
-      // }
+      &.h1 {
+        font-size: 1.4rem;
+      }
       &.h2 {
         font-size: 1.5rem;
         padding-left: 1rem;
@@ -432,7 +451,7 @@ footer {
       top: 5px;
       right: 5px;
 
-      font-size: 0.9rem;
+      font-size: 1.6rem;
       padding: 0.15rem;
       background-color: #828282;
       color: 11ee1e;

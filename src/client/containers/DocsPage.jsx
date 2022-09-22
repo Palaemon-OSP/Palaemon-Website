@@ -70,7 +70,7 @@ const DocsPage = () => {
       <main id="docs-main">
         {/* <!-- ![Palaemon Logo](./client/assets/logo.png) --> */}
         <p align="center">
-          <img src="../../../public/palaemon-banner.JPG" alt="drawing" />
+          <img src="public/palaemon-banner.JPG" alt="drawing" />
         </p>
 
         <h1 id="palaemon-fried_shrimp-">Palaemon</h1>

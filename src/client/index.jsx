@@ -21,6 +21,10 @@ const router = createBrowserRouter([
     element: <DocsPage />,
     errorElement: <NotFoundPage />,
   },
+  {
+    path: '*',
+    element: <NotFoundPage />,
+  },
 ]);
 
 root.render(
