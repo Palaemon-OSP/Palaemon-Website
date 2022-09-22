@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Sofia Pro Soft';
+  src: url('./Sofia-Pro-Soft.otf') format('opentype');
+}
+
 $ugly-sewage-green: #00695c;
 $p-light-color: #439889;
+$p-mid-color: #5ebdac;
 $p-dark-color: #003d33;
 
 $font-color: #002a25;
@@ -9,7 +15,7 @@ $tertiary-color: #d1ece9;
 $s-light-color: #e5ffff;
 $s-dark-color: #82ada9;
 
-$dark-grey-font: #777;
+$dark-grey-font: #666;
 $grey: #ddd;
 $white-font: rgba(255, 255, 255, 0.9);
 $subheading-font: 2rem;
@@ -18,11 +24,12 @@ $subheading-font: 2rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // border: 1px solid black;
 }
 
 html {
   font-size: 62.5%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Sofia Pro Soft', Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow-x: hidden;
 }
@@ -65,13 +72,15 @@ a {
   position: fixed;
   height: 8rem;
   min-width: 100%;
-  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.4);
   z-index: 99;
 
   .nav-container {
     display: flex;
     justify-content: space-between;
-    width: 120rem;
+    max-width: 120rem;
+    width: 100vw;
+    min-width: 400px;
   }
   #logo {
     width: 8rem;
@@ -118,7 +127,7 @@ a {
     &#hero,
     &#features {
       // background-color: $p-dark-color;
-      width: 120rem;
+      max-width: 120rem;
 
       main,
       figure {
@@ -128,8 +137,23 @@ a {
 
     &#demo {
       flex-direction: column;
-      background-color: $white-font;
+      // background-color: $white-font;
       align-items: center;
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+
+      img {
+        width: 75vw;
+        max-width: 80rem;
+        height: auto;
+        box-shadow: 0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.4);
+      }
+
+      .gif {
+        margin-top: 8rem;
+      }
 
       main,
       figure {
@@ -141,6 +165,10 @@ a {
       flex-direction: column;
       color: $white-font;
 
+      .team {
+        color: $font-color;
+        margin: 2rem 0;
+      }
       h1 {
         display: block;
       }
@@ -154,7 +182,7 @@ a {
           background: linear-gradient(
             to bottom,
             $ugly-sewage-green 0%,
-            $p-light-color 95%
+            $p-mid-color 95%
           );
           display: flex;
           flex-direction: column;
@@ -233,12 +261,12 @@ a {
     background: linear-gradient(
       to bottom,
       $ugly-sewage-green 0%,
-      $p-light-color 95%
+      $p-mid-color 95%
     );
     color: $white-font;
     font-size: 1.6rem;
     text-transform: uppercase;
-    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0.08rem 0.2rem 0 rgba(0, 0, 0, 0.6);
     transition: all 0.2s;
     margin-top: 2rem;
     font-weight: 700;
@@ -270,6 +298,7 @@ a {
 
   .features-text {
     font-size: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   .feature-btn {
@@ -283,12 +312,12 @@ a {
     background: linear-gradient(
       to bottom,
       $ugly-sewage-green 0%,
-      $p-light-color 95%
+      $p-mid-color 95%
     );
     color: $white-font;
     // text-transform: uppercase;
     letter-spacing: 0.06rem;
-    box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0.08rem 0.2rem 0 rgba(0, 0, 0, 0.6);
     flex: wrap;
     transition: all 0.2s;
     font-size: 1.6rem;
@@ -323,7 +352,7 @@ a {
     background: linear-gradient(
       135deg,
       $ugly-sewage-green 0%,
-      $p-light-color 95%
+      $p-light-color 100%
     );
     display: flex;
     align-items: center;
@@ -387,10 +416,20 @@ footer {
   display: flex;
   font-size: 1.6rem;
 
+  p {
+    line-height: 1.5;
+  }
+
   &-sidebar {
-    background-color: #002a25;
-    width: 280px;
-    min-width: 280px;
+    // background-color: #002a25;
+    // background-color: rgb(234, 234, 234);
+    width: 300px;
+    min-width: 300px;
+    border-right: 0.12rem solid rgb(0, 0, 0, 0.2);
+
+    a {
+      color: #002a25;
+    }
 
     ul {
       position: fixed;
@@ -414,10 +453,10 @@ footer {
       // white-space: nowrap;
 
       &.h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
       &.h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding-left: 1rem;
         // padding-right: -1rem;
       }
@@ -428,9 +467,10 @@ footer {
   }
 
   &-main {
-    background-color: rgb(234, 234, 234);
+    // background-color: rgb(234, 234, 234);
     flex-grow: 1;
     padding: 8px 60px;
+    margin-right: 30rem;
 
     *,
     *:before,
@@ -487,7 +527,8 @@ footer {
     img {
       margin-top: 8rem;
       border-radius: 2rem;
-      // width: 400px;
+      box-shadow: 0 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.4);
+      width: 90rem;
     }
 
     a {
@@ -506,7 +547,122 @@ footer {
       font-weight: 500;
     }
   }
+
+  .docs-heading-ul {
+    list-style: none;
+  }
+
+  .built-with-ul {
+    list-style: none;
+
+    & li > a {
+      text-decoration: none;
+    }
+  }
+
+  .prereqs-ul,
+  .google-ol {
+    margin-left: 2rem;
+    ul {
+      margin-left: 2rem;
+    }
+  }
+
+  .using-palaemon-ol {
+    margin-left: 2rem;
+    ul {
+      margin-left: 2rem;
+    }
+  }
+  .prom-ul > li,
+  .port-forward-p,
+  .features-ul {
+    list-style: none;
+  }
+  .planned-features-ol {
+    margin-left: 2rem;
+  }
+
+  #end-to-end-testing-with-playwright-test-runner {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  #unit-and-integration-tests-using-jest {
+    font-weight: 700;
+    font-size: 2rem;
+  }
 }
 
-// .feature-square {
-// }
+#docs-sidebar-container {
+  a:hover {
+    background: $white-font;
+    color: $ugly-sewage-green;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .hero-img {
+    display: flex;
+    align-items: center;
+  }
+  #palaemon-logo {
+    max-width: 75vw;
+  }
+  #navbar {
+    width: 100vw;
+    min-width: 0;
+  }
+  .nav-container,
+  .nav-links {
+    flex-flow: row wrap;
+  }
+  #landing-container section {
+    align-items: stretch;
+    margin: 0 5%;
+    flex: 1;
+
+    &#hero,
+    &#features {
+      main,
+      figure {
+        width: 100%;
+      }
+    }
+  }
+
+  #hero {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+
+    svg {
+      width: 2rem;
+    }
+  }
+  #features {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+  #demo {
+    img {
+      width: 75vw;
+    }
+  }
+  .spectacular {
+    flex-flow: row wrap;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+// doc
+@media screen and (max-width: 1190px) {
+  #docs-sidebar {
+    display: none;
+  }
+}

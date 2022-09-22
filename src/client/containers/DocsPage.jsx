@@ -47,7 +47,7 @@ const DocsPage = () => {
           <a href="#end-to-end-testing-with-playwright-test-runner">
             <li className="h2">End to End Tests</li>
           </a>
-          <a href="#features">
+          <a href="#features-h2">
             <li className="h1">Features</li>
           </a>
           <a href="#planned-features">
@@ -74,7 +74,7 @@ const DocsPage = () => {
         </p>
 
         <h1 id="palaemon-fried_shrimp-">Palaemon</h1>
-        <ul>
+        <ul className="docs-heading-ul">
           {/* <li>
             A gentle, euthanization and diagnosis tool for out-of-memory (OOM)
             kubernetes pods.{' '}
@@ -90,12 +90,12 @@ const DocsPage = () => {
         </ul>
         <h1 id="running-the-electron-app">Running the Electron App</h1>
         <p>Prerequisites:</p>
-        <ul>
-          <li>[ ] kubectl installed</li>
-          <li>[ ] Prometheus installed</li>
+        <ul className="prereqs-ul">
+          <li> kubectl installed</li>
+          <li> Prometheus installed</li>
           <li>
-            [ ] Prometheus port-forwarded to{' '}
-            <code class="inline-code">localhost:9090</code>
+            Prometheus port-forwarded to{' '}
+            <code className="inline-code">localhost:9090</code>
           </li>
         </ul>
         <h2 id="launching-in-dev-mode-with-hot-module-reload-hmr-">
@@ -106,18 +106,18 @@ const DocsPage = () => {
           commands:
         </p>
         <pre>
-          <code class="language-sh">npm install {'\n'}npm run build</code>
+          <code className="language-sh">npm install {'\n'}npm run build</code>
         </pre>
         <p>
-          This will build your initial <code class="inline-code">dist</code>{' '}
+          This will build your initial <code className="inline-code">dist</code>{' '}
           folder.
         </p>
         {/* <!-- If this it the first time running the app, start by `npm run build` to build your initial `dist` folder.  --> */}
         <p>Then on a different terminal run </p>
         <pre>
-          <code class="language-sh">
-            npm <span class="hljs-keyword">run</span>
-            <span class="bash"> electronmon</span>
+          <code className="language-sh">
+            npm <span className="hljs-keyword">run</span>
+            <span className="bash"> electronmon</span>
           </code>
         </pre>
         <p>
@@ -131,24 +131,24 @@ const DocsPage = () => {
           After the initial build, you can now run the following command
         </h2>
         <pre>
-          <code class="language-sh">
-            <span class="hljs-built_in">npm</span> start
+          <code className="language-sh">
+            <span className="hljs-built_in">npm</span> start
           </code>
         </pre>
         <p>
           This which will first delete the old{' '}
-          <code class="inline-code">dist</code> folder from your app, and
+          <code className="inline-code">dist</code> folder from your app, and
           concurrently launch the webpack to build and electronmon to wait for
-          the new <code class="inline-code">dist</code> folder to be built.
+          the new <code className="inline-code">dist</code> folder to be built.
         </p>
         <p>
           If the build process was interrupted through{' '}
-          <code class="inline-code">CTRL + C</code> or other means, then you may
-          receive the following error:
+          <code className="inline-code">CTRL + C</code> or other means, then you
+          may receive the following error:
         </p>
         <pre>
-          <code class="language-sh">
-            <span class="hljs-keyword">Error: </span>ENOENT: no such file or
+          <code className="language-sh">
+            <span className="hljs-keyword">Error: </span>ENOENT: no such file or
             directory, stat 'dist'
           </code>
         </pre>
@@ -158,9 +158,9 @@ const DocsPage = () => {
           normally.
         </p>
         <pre>
-          <code class="language-sh">
-            npm <span class="hljs-keyword">run</span>
-            <span class="bash"> build</span>
+          <code className="language-sh">
+            npm <span className="hljs-keyword">run</span>
+            <span className="bash"> build</span>
           </code>
         </pre>
         <h2 id="launching-in-production-mode-">
@@ -172,13 +172,13 @@ const DocsPage = () => {
           /dist.{' '}
         </p>
         <pre>
-          <code class="language-sh">
-            npm <span class="hljs-keyword">star</span>
-            <span class="hljs-variable">t:production</span>
+          <code className="language-sh">
+            npm <span className="hljs-keyword">star</span>
+            <span className="hljs-variable">t:production</span>
           </code>
         </pre>
         <h1 id="using-palaemon">Using Palaemon</h1>
-        <ol>
+        <ol className="using-palaemon-ol">
           <li>
             On a successful startup, you will be greeted with a landing page
             allowing you to select a namespace to be analyzed.
@@ -216,9 +216,9 @@ const DocsPage = () => {
           </li>
           <li>
             When the OOMKill type is seleceted, an{' '}
-            <code class="inline-code">Analyze</code> button will appear, where
-            you can click that to be taken to the{' '}
-            <code class="inline-code">Analysis</code> page.
+            <code className="inline-code">Analyze</code> button will appear,
+            where you can click that to be taken to the{' '}
+            <code className="inline-code">Analysis</code> page.
             <ul>
               <li>
                 Here is where you can find all of the information on your node
@@ -248,7 +248,7 @@ const DocsPage = () => {
         <h2 id="how-to-connect-to-google-kubernetes-engine">
           How to Connect to Google Kubernetes Engine
         </h2>
-        <ol>
+        <ol className="google-ol">
           <li>
             Install gcloud CLI on your local machine from{' '}
             <a href="https://cloud.google.com/sdk/docs/install">here</a>
@@ -258,9 +258,9 @@ const DocsPage = () => {
                 command below in your home directory, and make sure to update
                 your $PATH in the process.
                 <pre>
-                  <code class="language-sh">
-                    curl <span class="hljs-string">https:</span>
-                    <span class="hljs-comment">
+                  <code className="language-sh">
+                    curl <span className="hljs-string">https:</span>
+                    <span className="hljs-comment">
                       //sdk.cloud.google.com | bash
                     </span>
                   </code>
@@ -285,12 +285,12 @@ const DocsPage = () => {
                 Make sure to get the credentials of your cluster (see below) or
                 you will not be able to connect to your cluster
                 <pre>
-                  <code class="language-sh">
-                    <span class="hljs-string">gcloud </span>
-                    <span class="hljs-string">container </span>
-                    <span class="hljs-string">clusters </span>
-                    <span class="hljs-built_in">get-credentials</span> [
-                    <span class="hljs-string">CLUSTER_NAME]</span>
+                  <code className="language-sh">
+                    <span className="hljs-string">gcloud </span>
+                    <span className="hljs-string">container </span>
+                    <span className="hljs-string">clusters </span>
+                    <span className="hljs-built_in">get-credentials</span> [
+                    <span className="hljs-string">CLUSTER_NAME]</span>
                   </code>
                 </pre>
               </li>
@@ -329,24 +329,27 @@ const DocsPage = () => {
           below.
         </p>
         <pre>
-          <code class="language-sh">
-            kubectl port-forward -n <span class="hljs-string">[NAMESPACE]</span>{' '}
-            service/<span class="hljs-string">[PROMETHEUS]</span>{' '}
-            <span class="hljs-number">9090</span>
+          <code className="language-sh">
+            kubectl port-forward -n{' '}
+            <span className="hljs-string">[NAMESPACE]</span> service/
+            <span className="hljs-string">[PROMETHEUS]</span>{' '}
+            <span className="hljs-number">9090</span>
           </code>
         </pre>
-        <ul>
+        <ul className="prom-ul">
           <li>
             The -n flag indicates the namespace that the pod is assigned to.
           </li>
           <li>
             A list of all available services can be found through typing the
             command below in the terminal.
-            <pre>
-              <code class="language-sh">
-                kubectl <span class="hljs-keyword">get</span> services -A
-              </code>
-            </pre>
+          </li>
+          <pre>
+            <code className="language-sh">
+              kubectl <span className="hljs-keyword">get</span> services -A
+            </code>
+          </pre>
+          <li>
             Find the service with a 9090/TCP Port assigned, and forward that
             service to your local 9090.
           </li>
@@ -359,10 +362,11 @@ const DocsPage = () => {
         </p>
         <p>In the example above, the command would be :</p>
         <pre>
-          <code class="language-sh">
-            kubectl port-<span class="hljs-keyword">forward</span> -n monitoring
-            service/<span class="hljs-keyword">operator</span>
-            -kube-prometheus-s-prometheus <span class="hljs-number">9090</span>
+          <code className="language-sh">
+            kubectl port-<span className="hljs-keyword">forward</span> -n
+            monitoring service/<span className="hljs-keyword">operator</span>
+            -kube-prometheus-s-prometheus{' '}
+            <span className="hljs-number">9090</span>
           </code>
         </pre>
         <p>
@@ -373,7 +377,7 @@ const DocsPage = () => {
           below).
         </p>
         <ul>
-          <li>
+          <li className="port-forward-p">
             <p>
               A more detailed set of instructions can be found on Google&#39;s
               Documentations{' '}
@@ -403,20 +407,20 @@ const DocsPage = () => {
         </h3>
         <p>
           The jest testing suite will start with the command below. The{' '}
-          <code class="inline-code">--watch</code> flag is enabled, which allows
-          for immediate retests upon save. The jest config in{' '}
-          <code class="inline-code">jest.config.js</code> is set up to only look
-          for and run test files within the{' '}
-          <code class="inline-code">__test__</code> folder and with file names
-          that include &quot;.test.&quot; in them, such as
+          <code className="inline-code">--watch</code> flag is enabled, which
+          allows for immediate retests upon save. The jest config in{' '}
+          <code className="inline-code">jest.config.js</code> is set up to only
+          look for and run test files within the{' '}
+          <code className="inline-code">__test__</code> folder and with file
+          names that include &quot;.test.&quot; in them, such as
           &quot;Events.test.tsx&quot;.{' '}
         </p>
         <pre>
-          <code class="language-sh">
-            npm <span class="hljs-keyword">run</span>
-            <span class="bash">
+          <code className="language-sh">
+            npm <span className="hljs-keyword">run</span>
+            <span className="bash">
               {' '}
-              <span class="hljs-built_in">test</span>:watch
+              <span className="hljs-built_in">test</span>:watch
             </span>
           </code>
         </pre>
@@ -428,23 +432,24 @@ const DocsPage = () => {
           End-to-End testing with Playwright Test Runner
         </h3>
         <p>
-          <code class="inline-code">npm run test:e2e</code> will execute the
+          <code className="inline-code">npm run test:e2e</code> will execute the
           playwright test runner and run any test files in the{' '}
-          <code class="inline-code">__test__</code> folder with the name format
-          &quot;.e2e.&quot; in them, such as &quot;playwright.e2e.ts&quot;.{' '}
+          <code className="inline-code">__test__</code> folder with the name
+          format &quot;.e2e.&quot; in them, such as
+          &quot;playwright.e2e.ts&quot;.{' '}
         </p>
         <p>
           There are settings to enable HTML report and video, snapshot, trace
           recordings that can be configured in the{' '}
-          <code class="inline-code">playwright.config.ts</code> file is fo
+          <code className="inline-code">playwright.config.ts</code> file is fo
           desired.{' '}
         </p>
-        <h2 id="features">Features</h2>
-        <ul>
+        <h2 id="features-h2">Features</h2>
+        <ul className="features-ul">
           <li>Realtime Pod memory usage, sorted by namespaces</li>
         </ul>
         <h2 id="planned-features">Planned Features</h2>
-        <ol>
+        <ol className="planned-features-ol">
           <li>
             Provide custom alerts for OOMKill events with specific termination
             reasons such as “Limit Overcommit” or “Container Limit Reached”
@@ -456,7 +461,7 @@ const DocsPage = () => {
           </li>
         </ol>
         <h2 id="built-with">Built With</h2>
-        <ul>
+        <ul className="built-with-ul">
           <li>
             <a href="https://www.electronjs.org/">Electron</a>
           </li>
@@ -499,15 +504,15 @@ const DocsPage = () => {
           <h1>Launching in dev mode with Hot-Module Reload (HMR)</h1>
           <p>If this is the first time launching the app then run the following commands:</p>
           <pre>
-            <code class="language-sh">
+            <code className="language-sh">
               npm install{"\n"}
             npm run build</code>
             </pre>
           <p>You need to find which is your prometheus operator service by:</p>
-          <pre><code class="language-sh">kubectl get all</code></pre>
+          <pre><code className="language-sh">kubectl get all</code></pre>
           <h1>All hail the Clipboard API</h1>
           <p>Florid, wordly code exposition.</p>
-          <pre><code class="language-css">.some-box &#123;{"\n"}
+          <pre><code className="language-css">.some-box &#123;{"\n"}
             width: 20px;{"\n"}
             height: 20px;{"\n"}
             background: black;{"\n"}
@@ -515,9 +520,9 @@ const DocsPage = () => {
             &#125;
           </code></pre>
           <p>And I'll tell you another thing..</p>
-          <pre><code class="language-html">&lt;div class="box drop3"&gt;&lt;/div&gt;</code></pre>
+          <pre><code className="language-html">&lt;div className="box drop3"&gt;&lt;/div&gt;</code></pre>
           <p>No! Not finished..</p>
-          <pre><code class="language-javascript">console.log("finished");</code></pre>
+          <pre><code className="language-javascript">console.log("finished");</code></pre>
         </main> */}
       </main>
     </div>
