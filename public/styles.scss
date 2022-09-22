@@ -66,7 +66,7 @@ a {
   position: fixed;
   height: 8rem;
   min-width: 100%;
-  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.4);
   z-index: 99;
 
   .nav-container {
@@ -87,7 +87,7 @@ a {
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 4.8rem;
+    gap: 2.4rem;
     text-align: center;
     margin: 0.8rem 1.6rem;
 
@@ -140,7 +140,8 @@ a {
     &#contact {
       display: flex;
       flex-direction: column;
-      background-color: $p-dark-color;
+      color: $font-color;
+      // background-color: $p-dark-color;
 
       h1 {
         display: block;
@@ -150,7 +151,7 @@ a {
         display: flex;
         justify-content: space-around;
         gap: 50px;
-        background-color: $secondary-color;
+        // background-color: $secondary-color;
 
         &-person {
           display: flex;
@@ -159,6 +160,7 @@ a {
 
           &-name {
             font-size: 1.5rem;
+            margin-bottom: 0.6rem;
           }
           &-title {
             font-size: 1.2rem;
@@ -182,13 +184,14 @@ a {
 
   h1 {
     letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
   }
 
   .hero-subheading {
     font-size: $subheading-font;
     color: $dark-grey-font;
-    margin-bottom: 2rem;
-    line-height: 1.5;
+    margin-bottom: 3rem;
+    line-height: 1.3;
   }
 
   .hero-li-div {
@@ -204,6 +207,7 @@ a {
   .hero-li-1 {
     font-size: 1.6rem;
     font-weight: 700;
+    margin-bottom: 1rem;
   }
   .hero-li-2 {
     font-size: 1.4rem;
@@ -214,18 +218,18 @@ a {
   .hero-btn {
     border-radius: 1rem;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 1.2rem 2.4rem;
     background: linear-gradient(
       to bottom,
       $ugly-sewage-green 0%,
       $p-light-color 95%
     );
     color: $white-font;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.06rem;
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
     transition: all 0.2s;
+    margin-top: 2rem;
   }
 
   .hero-btn:hover {
@@ -241,14 +245,14 @@ a {
   .features-heading {
     font-size: 3.6rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .features-subheading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $dark-grey-font;
     margin-bottom: 3rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 
   .features-text {
@@ -258,24 +262,33 @@ a {
   .feature-btns {
     display: flex;
     gap: 2rem;
+
     .feature-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
       border-radius: 1rem;
       border: none;
-      padding: 0.6rem 1.2rem;
+      padding: 1.2rem 2.4rem;
       background: linear-gradient(
         to bottom,
         $ugly-sewage-green 0%,
         $p-light-color 95%
       );
       color: $white-font;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       letter-spacing: 0.06rem;
       box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.6);
       flex: wrap;
-      width: 14rem;
+      width: 24rem;
       transition: all 0.2s;
-      font-size: 1rem;
-      letter-spacing: 0.06rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+    }
+
+    .feature-btn-text {
+      text-align: left;
     }
   }
 
@@ -284,6 +297,14 @@ a {
     color: $ugly-sewage-green;
     filter: drop-shadow(0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6));
     cursor: pointer;
+  }
+
+  .feature-right-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin-top: 1.6rem;
   }
 
   .icon {
@@ -300,25 +321,18 @@ a {
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
   }
   .features-right-heading {
     font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 0.6rem;
+    margin-bottom: 2rem;
     letter-spacing: 0.1rem;
   }
   .features-text {
     color: $dark-grey-font;
     line-height: 1.5;
     font-size: 1.4rem;
-  }
-
-  .feature-right-side {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 4rem;
   }
 }
 
@@ -365,6 +379,7 @@ footer {
       list-style: none;
       margin: 0 2rem;
       padding: 0;
+      width: 280px;
     }
     img {
       position: fixed;
@@ -375,18 +390,21 @@ footer {
 
     li {
       margin: 8px 0;
-      word-wrap: break-word;
-      white-space: nowrap;
+      // word-wrap: break-word;
+      // display: inline-block;
+      // white-space: nowrap;
 
-      &.h1 {
-        // font-size: 1.4rem;
-      }
+      // &.h1 {
+      //   // font-size: 1.4rem;
+      // }
       &.h2 {
-        // font-size: 1.2rem;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        // padding-right: -1rem;
       }
-      &.h3 {
-        // font-size: 1rem;
-      }
+      // &.h3 {
+      //   // font-size: 1rem;
+      // }
     }
   }
 
