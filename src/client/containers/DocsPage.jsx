@@ -447,6 +447,24 @@ const DocsPage = () => {
         <h2 id="features-h2">Features</h2>
         <ul className="features-ul">
           <li>Realtime Pod memory usage, sorted by namespaces</li>
+          <li>
+            Connect to locally hosted or cloud hosted Kubernetes clusters and
+            Prometheus monitoring tools
+          </li>
+          <li>Filter by namespaces for meaningful reports</li>
+          <li>Monitoring for health and resource usage per pod and nodes</li>
+          <li>
+            Records and curates reports based on recent out-of-memory kill
+            (OOMKill) errors
+          </li>
+          <li>Displays event and alert logs</li>
+          <li>
+            Visualize health of pods and nodes by namespace in a Kubernetes
+            cluster
+          </li>
+          <li>
+            Execute customized queries based on user-defined time intervals
+          </li>
         </ul>
         <h2 id="planned-features">Planned Features</h2>
         <ol className="planned-features-ol">
@@ -458,6 +476,10 @@ const DocsPage = () => {
           <li>
             Automatic reconfiguration of YAML files to adjust memory limits and
             requests
+          </li>
+          <li>
+            A lightweight, active monitoring mode, which will store a log of
+            historic events and OOMKill data
           </li>
         </ol>
         <h2 id="built-with">Built With</h2>
