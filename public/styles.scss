@@ -399,7 +399,8 @@ footer {
   text-align: center;
   margin-top: 10rem;
   img {
-    width: 60rem;
+    width: 80%;
+    max-width: 60rem;
   }
   h1 {
     font-size: 4.8rem;
@@ -615,6 +616,10 @@ footer {
   #navbar {
     width: 100vw;
     min-width: 0;
+
+    .nav-container {
+      padding: 0 5%;
+    }
   }
   .nav-container,
   .nav-links {
@@ -639,6 +644,10 @@ footer {
     margin: 0px;
     padding: 0px;
 
+    .hero-btn {
+      margin-left: 2rem;
+    }
+
     svg {
       width: 2rem;
     }
@@ -647,6 +656,10 @@ footer {
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+
+    .features-heading {
+      margin-top: 3rem;
+    }
   }
   #demo {
     img {
