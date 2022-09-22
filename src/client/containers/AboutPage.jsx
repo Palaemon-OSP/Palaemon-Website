@@ -74,7 +74,9 @@ const AboutPage = () => {
               </div>
             </div>
           </ul>
-          <button className="hero-btn">Get Started</button>
+          <a href="https://github.com/oslabs-beta/Palaemon">
+            <button className="hero-btn">Get Started</button>
+          </a>
         </main>
       </section>
 
@@ -141,7 +143,9 @@ const AboutPage = () => {
             </a> */
           /* </div> */}
           {/* -------------------- END OF DOWNLOAD BUTTONS -------------------- */}
-          <button className="feature-btn">See the Docs</button>
+          <a href="/docs">
+            <button className="feature-btn">See the Docs</button>
+          </a>
         </main>
         {/* -------------------- START OF FEATURE GRID -------------------- */}
         <figure className="feature-right-side">
