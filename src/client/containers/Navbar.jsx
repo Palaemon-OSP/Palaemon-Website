@@ -14,10 +14,14 @@ const Navbar = () => {
               <a href="/docs">Docs</a>
             </li>
             <li>
-              <a href="https://github.com/oslabs-beta/Palaemon">Github</a>
+              <a href="https://github.com/oslabs-beta/Palaemon" target="_blank">
+                Github
+              </a>
             </li>
             <li>
-              <a href="/medium">Blog</a>
+              <a href="/medium" target="_blank">
+                Blog
+              </a>
             </li>
           </ul>
         </div>

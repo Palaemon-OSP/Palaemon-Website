@@ -74,7 +74,7 @@ const AboutPage = () => {
               </div>
             </div>
           </ul>
-          <a href="https://github.com/oslabs-beta/Palaemon">
+          <a href="https://github.com/oslabs-beta/Palaemon" target="_blank">
             <button className="hero-btn">Get Started</button>
           </a>
         </main>
@@ -270,7 +270,7 @@ const AboutPage = () => {
             <div className="spectacular-person-title">Software Engineer</div>
             <div className="spectacular-person-links">
               <div className="spectacular-person-github">
-                <a href="https://github.com/pathu91">
+                <a href="https://github.com/pathu91" target="_blank">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt=""
@@ -278,9 +278,12 @@ const AboutPage = () => {
                 </a>
               </div>
               <div className="spectacular-person-linkedin">
-                <a href="https://www.linkedin.com/in/patrickhu91/">
+                <a
+                  href="https://www.linkedin.com/in/patrickhu91/"
+                  target="_blank"
+                >
                   <img
-                    src="http://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
                     alt=""
                   />
                 </a>
@@ -302,7 +305,7 @@ const AboutPage = () => {
             <div className="spectacular-person-title">Software Engineer</div>
             <div className="spectacular-person-links">
               <div className="spectacular-person-github">
-                <a href="https://github.com/FrozenStove">
+                <a href="https://github.com/FrozenStove" target="_blank">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt=""
@@ -310,9 +313,12 @@ const AboutPage = () => {
                 </a>
               </div>
               <div className="spectacular-person-linkedin">
-                <a href="https://www.linkedin.com/in/raivyno-sutrisno/">
+                <a
+                  href="https://www.linkedin.com/in/raivyno-sutrisno/"
+                  target="_blank"
+                >
                   <img
-                    src="http://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
                     alt=""
                   />
                 </a>
@@ -334,7 +340,7 @@ const AboutPage = () => {
             <div className="spectacular-person-title">Software Engineer</div>
             <div className="spectacular-person-links">
               <div className="spectacular-person-github">
-                <a href="https://github.com/siyoungmah">
+                <a href="https://github.com/siyoungmah" target="_blank">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt=""
@@ -342,9 +348,12 @@ const AboutPage = () => {
                 </a>
               </div>
               <div className="spectacular-person-linkedin">
-                <a href="https://www.linkedin.com/in/siyoungmah/">
+                <a
+                  href="https://www.linkedin.com/in/siyoungmah/"
+                  target="_blank"
+                >
                   <img
-                    src="http://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
                     alt=""
                   />
                 </a>
@@ -365,7 +374,7 @@ const AboutPage = () => {
             <div className="spectacular-person-title">Software Engineer</div>
             <div className="spectacular-person-links">
               <div className="spectacular-person-github">
-                <a href="https://github.com/thang-thai">
+                <a href="https://github.com/thang-thai" target="_blank">
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     alt=""
@@ -373,9 +382,12 @@ const AboutPage = () => {
                 </a>
               </div>
               <div className="spectacular-person-linkedin">
-                <a href="https://www.linkedin.com/in/thang-thai/">
+                <a
+                  href="https://www.linkedin.com/in/thang-thai/"
+                  target="_blank"
+                >
                   <img
-                    src="http://cdn.onlinewebfonts.com/svg/img_24651.png"
+                    src="https://cdn.onlinewebfonts.com/svg/img_24651.png"
                     alt=""
                   />
                 </a>

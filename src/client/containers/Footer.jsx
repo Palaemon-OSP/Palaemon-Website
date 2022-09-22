@@ -17,7 +17,7 @@ const Footer = () => {
             alt=""
           />
         </a>
-        <a href="https://github.com/oslabs-beta/Palaemon">
+        <a href="https://github.com/oslabs-beta/Palaemon" target="_blank">
           <img
             className="footer-logos"
             src="https://cdn-icons-png.flaticon.com/512/5968/5968933.png"
