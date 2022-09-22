@@ -7,7 +7,7 @@ import AboutPage from './containers/AboutPage';
 import DocsPage from './containers/DocsPage';
 import NotFoundPage from './containers/NotFoundPage';
 
-import "../../public/styles.scss";
+import '../../public/styles.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -19,8 +19,12 @@ const router = createBrowserRouter([
   {
     path: '/docs',
     element: <DocsPage />,
-    errorElement: <NotFoundPage />
-  }
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
+  },
 ]);
 
 root.render(
