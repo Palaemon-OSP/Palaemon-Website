@@ -254,7 +254,7 @@ const DocsPage = () => {
             <a href="https://cloud.google.com/sdk/docs/install">here</a>
             <ul>
               <li>
-                If you have having problems with the gcloud CLI, try using the
+                If you are having problems with the gcloud CLI, try using the
                 command below in your home directory, and make sure to update
                 your $PATH in the process.
                 <pre>
