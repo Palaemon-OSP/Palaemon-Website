@@ -309,10 +309,19 @@ const DocsPage = () => {
           This includes a full monitoring stack: Prometheus, Alert Manager, Node
           Exporter, Grafana, and Kube State Metrics. Prometheus Operator can be
           installed onto your cluster via Helm at the link{' '}
-          <a href="https://artifacthub.io/packages/helm/choerodon/prometheus-operator">
+          {/* <a href="https://artifacthub.io/packages/helm/choerodon/prometheus-operator"> */}
+          <a href="https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack">
             here
           </a>
-          .
+          <span>, or by using the command below.</span> <br></br>
+          <pre>
+            <code className="language-sh">
+              helm install monitoring prometheus-community/kube-prometheus-stack --namespace=monitoring
+            </code>
+          </pre>
+
+
+
         </p>
         <p>
           Once you have Prometheus installed into your Kubernetes cluster,
